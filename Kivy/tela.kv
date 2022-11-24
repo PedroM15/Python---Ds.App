@@ -1,0 +1,47 @@
+MDFloatLayout:
+    MDTopAppBar:
+        title: "AppBar"
+        elevation: 1
+        use_overflow: True
+        right_action_items:
+            [
+            ["close-box", lambda x: app.fechar(), "close"],
+            ["account-circle", lambda x: app.callback(x), "Perfil"],
+            ["reload", lambda x: app.rst(), "Reset"]
+            ]
+        pos_hint: {'center_x' : 0.5, 'center_y' : 0.96}
+        md_bg_color: 0, 0, 1, 1
+
+    MDLabel:
+        id: l1
+        text: "Immc"
+        halign: 'center'
+        pos_hint: {'center_y': .8}
+        font_style: "H6"
+        theme_text_color: "Custom"
+        text_color: "blue"
+
+    MDTextField:
+        id: peso
+        hint_text: "Insira o seu peso."
+        mode: "rectangle"
+        size_hint: .39, .09
+        pos_hint: {'center_x':.72, 'center_y': .7}
+
+    MDTextField:
+        id: alt
+        hint_text: "Insira a sua altura."
+        mode: "rectangle"
+        size_hint: .39, .09
+        pos_hint: {'center_x':.28, 'center_y': .7}
+
+    MDRectangleFlatButton:
+        id: bt1
+        text: "Calcule o seu immc."
+        theme_text_color: "Custom"
+        pos_hint: {'center_x':.5, 'center_y': .5}
+        text_color: "black"
+        line_color: "blue"
+        on_press: app.Conta()
+
+
