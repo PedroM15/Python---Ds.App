@@ -1,5 +1,6 @@
 import kivy 
-'''kivy.require('2.1.0') # replace with your current kivy version !'''
+kivy.require('2.1.0') # replace with your current kivy version !
+
 from kivy.lang import Builder
 from kivymd.app import App
 
