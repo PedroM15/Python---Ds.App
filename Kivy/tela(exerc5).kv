@@ -1,0 +1,105 @@
+Loader:
+    Home:
+    Screen1:
+    Screen2:
+
+<Home>
+    name: "home"
+    MDFloatLayout:
+        MDTopAppBar:
+            title: "Home"
+            elevation: 1
+            use_overflow: True
+            right_action_items:
+                [
+                ["close-box", lambda x: app.fechar(), "close"],
+                ["account-circle", lambda x: app.callback(x), "Perfil"],
+                ["reload", lambda x: app.rst(), "Reset"]
+                ]
+            pos_hint: {'center_x' : 0.5, 'center_y' : 0.96}
+            md_bg_color: 0, 0, 1, 1
+
+        MDRectangleFlatButton:
+            id: bt1
+            text: "Ir para a 1º tela"
+            theme_text_color: "Custom"
+            pos_hint: {'center_x':.5, 'center_y': .5}
+            text_color: "black"
+            line_color: "blue"
+            on_press:
+                app.root.current = 'tela1'
+                root.manager.transition.direction = 'left'
+
+        MDRectangleFlatButton:
+            id: bt1
+            text: "Ir para a 2º tela"
+            theme_text_color: "Custom"
+            pos_hint: {'center_x':.5, 'center_y': .4}
+            text_color: "black"
+            line_color: "blue"
+            on_press:
+                app.root.current = 'tela2'
+                root.manager.transition.direction = 'left'
+
+        MDRectangleFlatButton:
+            id: bt1
+            text: "EXIT"
+            theme_text_color: "Custom"
+            pos_hint: {'center_x':.5, 'center_y': .3}
+            text_color: "black"
+            line_color: "red"
+            on_press: app.fechar()
+
+<Screen1>
+    name: "tela1"
+    MDFloatLayout:
+        MDTopAppBar:
+            title: "Tela 1"
+            elevation: 1
+            use_overflow: True
+            right_action_items:
+                [
+                ["close-box", lambda x: app.fechar(), "close"],
+                ["account-circle", lambda x: app.callback(x), "Perfil"],
+                ["reload", lambda x: app.rst(), "Reset"]
+                ]
+            pos_hint: {'center_x' : 0.5, 'center_y' : 0.96}
+            md_bg_color: 0, 0, 1, 1
+
+        MDRectangleFlatButton:
+            id: bt1
+            text: "Ir para a home"
+            theme_text_color: "Custom"
+            pos_hint: {'center_x':.5, 'center_y': .5}
+            text_color: "black"
+            line_color: "blue"
+            on_press:
+                app.root.current = 'home'
+                root.manager.transition.direction = 'right'
+
+<Screen2>
+    name: "tela2"
+    MDFloatLayout:
+        MDTopAppBar:
+            title: "Tela 2"
+            elevation: 1
+            use_overflow: True
+            right_action_items:
+                [
+                ["close-box", lambda x: app.fechar(), "close"],
+                ["account-circle", lambda x: app.callback(x), "Perfil"],
+                ["reload", lambda x: app.rst(), "Reset"]
+                ]
+            pos_hint: {'center_x' : 0.5, 'center_y' : 0.96}
+            md_bg_color: 0, 0, 1, 1
+
+        MDRectangleFlatButton:
+            id: bt1
+            text: "Ir para a home"
+            theme_text_color: "Custom"
+            pos_hint: {'center_x':.5, 'center_y': .5}
+            text_color: "black"
+            line_color: "blue"
+            on_press:
+                app.root.current = 'home'
+                root.manager.transition.direction = 'right'
