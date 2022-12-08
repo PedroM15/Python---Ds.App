@@ -1,0 +1,292 @@
+Loader:
+    Home:
+    Screen1:
+    Screen2:
+
+<Home>
+    name: "home"
+    MDFloatLayout:
+        md_bg_color: "18181B"
+
+        MDTopAppBar:
+            title: "[size=20] [color=#000000]CHÁZEN[/size] [/color]"
+            right_action_items:
+                [
+                ["close-box-outline", lambda x: app.fechar(), "Fechar"]
+                ]
+            elevation: 1
+            pos_hint: {'center_x' : 0.5, 'center_y' : 0.96} #posição
+            md_bg_color: 1, 1, 1, 1
+
+        FitImage:
+            size_hint: .40, .40
+            pos_hint: {'center_x' : .5, 'top': .92}
+            source: 'image/logo_chazen.png'
+
+        MDLabel:
+            text: 'Seja bem-vindo (a) ao app CHÁZEN. Aqui você pode conhecer os mais diversos tipos de chás e seus benefícios'
+            halign: "center"
+            pos_hint: {'center_x': .5, 'center_y': .50}
+            size_hint: .6, .08
+            theme_text_color: "Custom"
+            text_color: "D4D4D8"
+
+        MDFillRoundFlatButton:
+            text: "Lista de chás"
+            custom_color: "white"
+            halign: "center"
+            pos_hint: {'center_x': .5, 'center_y': .35}
+            size_hint: .6, .08
+            md_bg_color: "FAFAFA"
+            font_size: "16"
+            on_press:
+                app.root.current = 'tela1'
+                root.manager.transition.direction = 'left'
+
+        MDFillRoundFlatButton:
+            text: "Cuidando de você"
+            custom_color: "white"
+            halign: "center"
+            pos_hint: {'center_x': .5, 'center_y': .25}
+            size_hint: .6, .08
+            md_bg_color: "FAFAFA"
+            font_size: "16"
+            on_press:
+                app.root.current = 'tela2'
+                root.manager.transition.direction = 'left'
+
+<Screen1>
+    name: "tela1"
+    MDFloatLayout:
+        md_bg_color: "18181B"
+        MDTopAppBar:
+            title: "[size=20] [color=#000000]LISTA DE CHÁS[/size] [/color]"
+            right_action_items:
+                [
+                ["close-box-outline", lambda x: app.fechar(), "Fechar"]
+                ]
+            elevation: 1
+            pos_hint: {'center_x' : 0.5, 'center_y' : 0.96} #posição
+            md_bg_color: 1, 1, 1, 1
+# ---------------------------------------------
+
+        MDScrollView:
+            pos_hint: {'center_x' : .48, 'center_y': .45}
+            size_hint: 1, .88
+            MDList:
+                divider: 'Inset'
+                TwoLineIconListItem:
+                    text: "Erva-cidreira"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ação contra asma, excesso de gases e "
+                    secondary_font_style: 'Body2'
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    tertiary_text: "nauseas."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+
+
+                ThreeLineAvatarIconListItem:
+                    text: "Camomila"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ações ansiolíticas indutoras do sono,"
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    secondary_font_style: 'Body2'
+                    tertiary_text: " anti-inflamatórias e antioxidantes."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+
+                TwoLineIconListItem:
+                    text: "Chá-verde"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ação anti-envelhecimento e é um "
+                    secondary_font_style: 'Body2'
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    tertiary_text: "coadjuvante insulínico."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+
+                TwoLineIconListItem:
+                    text: "Limão"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ação diurética, coadjuvante insulínico e "
+                    secondary_font_style: 'Body2'
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    tertiary_text: "antiinflamatório."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+
+                TwoLineIconListItem:
+                    text: "Folha de Maracuja"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ação sedativa, antiinflamatória, vermífuga, e "
+                    secondary_font_style: 'Body2'
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    tertiary_text: "analgésica."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+
+                TwoLineIconListItem:
+                    text: "Erva doce"
+                    text_color: "#FFFFFF"
+                    theme_text_color: 'Custom'
+                    secondary_text: "Ação na redução de inchaços e gases e "
+                    secondary_font_style: 'Body2'
+                    secondary_theme_text_color: 'Custom'
+                    secondary_text_color: "D4D4D8"
+                    tertiary_text: "melhora a digestão."
+                    tertiary_theme_text_color: 'Custom'
+                    tertiary_text_color: "D4D4D8"
+                    tertiary_font_style: 'Body2'
+                    IconLeftWidget:
+                        icon: "folha.png"
+# ---------------------------------------------
+
+
+        MDFloatingActionButton:
+            icon: "home"
+            md_bg_color: 1, 1, 1, 1
+            icon_color: "black"
+            pos_hint: {'center_x': 0.9, 'center_y' : .07}
+            on_press:
+                app.root.current = 'home'
+                root.manager.transition.direction = 'right'
+
+# ---------------------------------------------
+
+<Screen2>
+    name: "tela2"
+    MDFloatLayout:
+        md_bg_color: "18181B"
+        MDTopAppBar:
+            title: "[size=20] [color=#000000]SINTOMAS[/size] [/color]"
+            right_action_items:
+                [
+                ["close-box-outline", lambda x: app.fechar(), "Fechar"]
+                ]
+            elevation: 1
+            pos_hint: {'center_y' : 0.96} #posição
+            md_bg_color: 1, 1, 1, 1
+# ---------------------------------------------
+
+        MDRaisedButton:
+            text: "Escolha um sintoma"
+            on_release: root.sintomas()
+            pos_hint: {"center_x": .5, "center_y": .07}
+            size_hint: .5, .06
+            theme_text_color: "Custom"
+            text_color: "black"
+            md_bg_color: "FAFAFA"
+
+        MDFloatingActionButton:
+            icon: "home"
+            md_bg_color: 1, 1, 1, 1
+            icon_color: "black"
+            pos_hint: {'center_x': 0.9, 'center_y' : .07}
+            on_press:
+                app.root.current = 'home'
+                root.manager.transition.direction = 'right'
+# ---------------------------------------------
+
+        FitImage:
+            id: cha1
+            size_hint: .30, .30
+            pos_hint: {'center_x' : .2, 'top': .92}
+            source: 'tea/Logo_chazen.png'
+
+
+        MDLabel:
+            id: title1
+            text: "#1 Escolha um sintoma"
+            halign: 'left'
+            pos_hint: {'center_x' : .9, 'center_y': .85}
+            theme_text_color: "Custom"
+            text_color: "white"
+            font_style: 'Subtitle2'
+
+        MDLabel:
+            id: desc1
+            text: "Seja bem-vindo (a) ao app CHÁZEN. Aqui você pode conhecer os mais diversos tipos de chás e seus benefícios"
+            halign: 'left'
+            pos_hint: {'center_x' : .70, 'center_y': .75}
+            size_hint: .55, .9
+            theme_text_color: "Custom"
+            text_color: "D4D4D8"
+            font_style: 'Body2'
+# ---------------------------------------------
+
+        FitImage:
+            id: cha2
+            size_hint: .30, .30
+            pos_hint: {'center_x' : .2, 'top': .71}
+            source: 'tea/Logo_chazen.png'
+
+        MDLabel:
+            id: title2
+            text: "#2 Escolha um sintoma"
+            halign: 'left'
+            pos_hint: {'center_x' : .9, 'center_y': .62}
+            theme_text_color: "Custom"
+            text_color: "white"
+            font_style: 'Subtitle2'
+
+        MDLabel:
+            id: desc2
+            text: "Seja bem-vindo (a) ao app CHÁZEN. Aqui você pode conhecer os mais diversos tipos de chás e seus benefícios"
+            halign: 'left'
+            pos_hint: {'center_x' : .70, 'center_y': .52}
+            size_hint: .55, .9
+            theme_text_color: "Custom"
+            text_color: "D4D4D8"
+            font_style: 'Body2'
+# ---------------------------------------------
+
+        FitImage:
+            id: cha3
+            size_hint: .30, .30
+            pos_hint: {'center_x' : .2, 'top': .49}
+            source: 'tea/Logo_chazen.png'
+
+        MDLabel:
+            id: title3
+            text: "#3 Escolha um sintoma"
+            halign: 'left'
+            pos_hint: {'center_x' : .9, 'center_y': .38}
+            theme_text_color: "Custom"
+            text_color: "white"
+            font_style: 'Subtitle2'
+
+        MDLabel:
+            id: desc3
+            text: "Seja bem-vindo (a) ao app CHÁZEN. Aqui você pode conhecer os mais diversos tipos de chás e seus benefícios"
+            halign: 'left'
+            pos_hint: {'center_x' : .70, 'center_y': .28}
+            size_hint: .55, .9
+            theme_text_color: "Custom"
+            text_color: "D4D4D8"
+            font_style: 'Body2'
